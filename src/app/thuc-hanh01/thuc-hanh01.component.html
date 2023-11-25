@@ -1,0 +1,38 @@
+<!-- thực hành về hàm ngIf, gọi hàm từ ts và gắn kết dữ liệu -->
+ <!--  <button (click)="toggleReadMore()">{{ isReadMore ? 'More...' : 'Short View'  }}</button>
+  <p *ngIf="isReadMore; else elseBlock">{{ content1 }}</p>
+    <ng-template #elseBlock> <p>{{content2}}</p>  </ng-template>
+  <hr> -->
+  
+  <!-- 23/09 thực hành về hàm ngIf, gọi hàm từ ts và gắn kết dữ liệu -->
+  <button (click)="toggleReadMore()">{{ isReadMore ? 'More...' : 'Short View'  }}</button>
+  <p *ngIf="isReadMore; else elseBlock">{{ content1 }}</p>
+    <ng-template #elseBlock> <p>{{content2}}</p>  </ng-template>
+  <hr>
+
+  <div>
+    <input type="text" (input)="onInput($event)">
+    <button (click)="onClickMe()">Click me!</button>
+    <button (click)="onClear()">Clear</button>
+  </div>
+
+  <div class="row mb-4">
+    <h2 class="col-12">Filter by: {{filterValue}}</h2>
+  </div>
+  <input type="text" class="col-3" [(ngModel)]='onClickValue'>
+
+  <!-- <div class="row mb-2">
+    <label class="col-2">Filter:</label>
+    <input type="text" class="col-3" (input)='filter($event)'>
+
+    <div class="col-7"></div>
+  </div>
+  <div class="row mb-4">
+    <h2 class="col-12">Filter by: {{filterValue}}</h2>
+  </div>
+  <input type="text" class="col-3" [(ngModel)]='filterValue'> -->
+  
+  <!-- [(ngModel)]: 
+        - Biến ánh xạ, là sự ánh xạ dữ liệu giữa control trên template với thuộc tính trong class
+        - Gắn kết dữ liệu 2 chiều
+        - Thay thế cho biến {{filterValue}}-->
